@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Finder Assistant</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main id="app-container">
+        <header>
+            <h1>Find Your Next Movie</h1>
+        </header>
+
+        <!-- Step 1: Start -->
+        <section id="start-screen" class="step">
+            <h2>Do you have a favorite genre?</h2>
+            <div class="options">
+                <button id="start-yes">Yes</button>
+                <button id="start-no">No</button>
+            </div>
+        </section>
+
+        <!-- Step 2: Choose Mood (if no favorite genre) -->
+        <section id="mood-screen" class="step hidden">
+            <h2>What do you feel like watching?</h2>
+            <div class="options">
+                <button class="mood-choice" data-genre="horror">Something scary</button>
+                <button class="mood-choice" data-genre="romance">Something romantic</button>
+                <button class="mood-choice" data-genre="documentary">Something educational</button>
+                <button class="mood-choice" data-genre="action">Something fast paced</button>
+            </div>
+        </section>
+
+        <!-- Step 3: Movie Decided? -->
+        <section id="decision-screen" class="step hidden">
+            <h2 id="decision-question">Have you decided upon which movie?</h2>
+            <div class="options">
+                <button id="decision-yes">Yes</button>
+                <button id="decision-no">No</button>
+            </div>
+        </section>
+
+        <!-- Step 4: Check Availability -->
+        <section id="availability-screen" class="step hidden">
+            <h2>Is it available on your streaming service?</h2>
+            <div class="options">
+                <button id="availability-yes">Yes</button>
+                <button id="availability-no">No</button>
+            </div>
+        </section>
+
+        <!-- Step 5: Check Affordability -->
+        <section id="affordability-screen" class="step hidden">
+            <h2>Can you afford to pay for movies? <small>(e.g., rent, buy, or subscribe to a new service)</small></h2>
+            <div class="options">
+                <button id="afford-yes">Yes, I can afford it</button>
+                <button id="afford-no">No, I can't afford it</button>
+            </div>
+        </section>
+
+        <!-- Step 6: Check Risk Willingness -->
+        <section id="risk-screen" class="step hidden">
+            <h2>Are you willing to take risks?</h2>
+            <div class="options">
+                <button id="risk-yes">Yes</button>
+                <button id="risk-no">No</button>
+            </div>
+        </section>
+
+        <!-- Result/Outcome Screens -->
+        <section id="result-research" class="step result-screen hidden">
+            <h2>Next Step:</h2>
+            <p>Research online for recommendations, then come back and start over once you've picked a movie!</p>
+            <button class="restart">Start Over</button>
+        </section>
+
+        <section id="result-enjoy" class="step result-screen hidden">
+            <h2>Awesome!</h2>
+            <p>Enjoy!</p>
+            <button class="restart">Find Another Movie</button>
+        </section>
+
+        <section id="result-find-new-service" class="step result-screen hidden">
+            <h2>Your Path:</h2>
+            <p>Find a streaming service with the movie you want to watch, and become a member (or rent/buy it there).</p>
+            <button class="restart">Start Over</button>
+        </section>
+        
+        <section id="result-pirate" class="step result-screen hidden">
+            <h2>Your Path:</h2>
+            <p>You can use a pirated movie site.</p>
+            <p class="warning">Warning: This may be illegal and could expose your device to security risks.</p>
+            <button class="restart">Start Over</button>
+        </section>
+
+        <section id="result-free-trials" class="step result-screen hidden">
+            <h2>Your Path:</h2>
+            <p>You can try to find any free trials for streaming services that have your movie.</p>
+            <div class="options">
+                <button id="free-trial-continue">Okay, I'll try that</button>
+                <button class="restart">Start Over</button>
+            </div>
+        </section>
+
+        <footer>
+            <p>A Web Application based on your Flowchart</p>
+        </footer>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
